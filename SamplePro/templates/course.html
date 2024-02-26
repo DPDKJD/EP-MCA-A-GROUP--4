@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COURSE PAGE</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+       
+        }
+
+        input{
+            padding: 10px;
+            margin: 10px;
+            font-size: 18px;
+            width: 300px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        button{
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(to right, #00b0ff, #0093ff);
+            color: #fff;
+            transition: background 0.3s ease;
+        }
+        button:hover{
+            background: linear-gradient(to right, #0d81d4, #00b0ff);
+        }
+    </style>
+</head>
+<body background="{{url_for('static',filename='/images/book.jpg')}}">
+    <div class="container">
+        <h1>COURSE PAGE</h1>
+        <form action="" method="post">
+            <label for="courseName">Course name:</label>
+            <input type="text" name="coursename" id="courseName" placeholder="Course name...">           
+            <label for="courseCode">Course code:</label>
+            <input type="text" name="coursecode" id="courseCode" placeholder="Course code...">
+        <button id="courseButton">ADD COURSE</button>
+        <button id="BackButton">Back</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("courseButton").addEventListener("click", function(event){
+            var courseName = document.getElementById("courseName").value;
+            var courseCode = document.getElementById("courseCode").value;
+
+            // Do something with the course name and code here, such as sending them to a server
+
+            alert("Adding course: " + courseName + " (" + courseCode + ")...");
+        });
+        document.getElementById("BackButton").addEventListener("click", function(){
+            window.location.href = "main4.html"
+        });
+    </script>
+</body>
+</html>

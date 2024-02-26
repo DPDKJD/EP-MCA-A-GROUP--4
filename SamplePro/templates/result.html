@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESULT</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            color:black        }
+
+        form{
+            display: inline-block;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        label{
+            display: block;
+            margin: 10px 0;
+        }
+
+        input{
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button{
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(to right, #00b0ff, #0093ff);
+            color: #fff;
+            transition: background 0.3s ease;
+        }
+
+        button:hover{
+            background: linear-gradient(to right, #0d81d4, #00b0ff);
+        }
+    </style>
+</head>
+<body background="{{url_for('static',filename='/images/stud.jpeg')}}">
+    <div class="container">
+        <h1>Enter Result</h1>
+        <form action="" method="post">
+            <label for="studentName">
+                <b>Student Name:</b> <input type="text" id="studentName" name="studentName">
+            </label>
+            <label for="course">
+                <b>Course:</b><input type="text" id="course" name="course">
+            </label>
+            <label for="grade">
+                <b>Grade:</b> <input type="text" id="grade" name="grade">
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
